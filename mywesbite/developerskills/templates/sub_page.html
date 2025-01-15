@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ card.title }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <div class="h-screen flex flex-col items-center justify-center">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold">{{ card.title }}</h1>
+            <p class="mt-4 text-gray-600">{{ card.description }}</p>
+        </div>
+        <button id="scrollUp" class="mt-8 bg-blue-500 text-white px-4 py-2 rounded">
+            Previous
+        </button>
+        <button id="scrollDown" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded">
+            Next
+        </button>
+    </div>
+    <script>
+        const scrollUp = document.getElementById("scrollUp");
+        const scrollDown = document.getElementById("scrollDown");
+
+        scrollUp.addEventListener("click", () => {
+            window.history.back();
+        });
+
+        scrollDown.addEventListener("click", () => {
+            alert("Implement navigation to next card logic!");
+        });
+    </script>
+</body>
+</html>

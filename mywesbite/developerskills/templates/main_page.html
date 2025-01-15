@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div id="cards" class="h-screen overflow-hidden snap-y snap-mandatory scroll-smooth">
+        {% for card in cards %}
+        <div 
+            class="h-screen flex items-center justify-center bg-cover bg-center text-white text-center shadow-md transition-transform transform"
+            style="background-image: url('{% if card.image %}{{ card.image }}{% endif %}');"
+        >
+            <div class="bg-black bg-opacity-25 p-8 rounded transition-opacity">
+                <h1 class="text-4xl font-bold">{{ card.title }}</h1>
+                <p class="mt-4 text-gray-300">{{ card.description }}</p>
+                {% if card.link %}
+                <a href="{{ card.link }}" class="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded">
+                    Learn More
+                </a>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <script>
+        // Smooth scrolling via mouse wheel or arrow click
+        const sections = document.querySelectorAll("#cards > div");
+        let currentSectionIndex = 0;
+
+        document.addEventListener("wheel", (event) => {
+            if (event.deltaY > 0 && currentSectionIndex < sections.length - 1) {
+                currentSectionIndex++;
+            } else if (event.deltaY < 0 && currentSectionIndex > 0) {
+                currentSectionIndex--;
+            }
+            sections[currentSectionIndex].scrollIntoView({ behavior: "smooth" });
+        });
+    </script>
+</body>
+</html>

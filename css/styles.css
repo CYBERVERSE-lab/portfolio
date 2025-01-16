@@ -1,0 +1,119 @@
+/* General Reset */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Outer Container */
+.outer-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Background Image */
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('your-image.jpg');
+    /* Replace with your image file */
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    opacity: 0.5;
+    /* Adjust for visibility */
+}
+
+/* Inner Container (Content) */
+.inner-container {
+    position: relative;
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    height: 90%;
+    background: white;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    z-index: 4;
+    overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 25%;
+    background: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+
+.photo-placeholder {
+    width: 60%;
+    height: 200px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.api-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* API Card */
+.api-card {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.api-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.method-select {
+    width: 15%;
+    margin-right: 10px;
+}
+
+.url-input {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.request-button {
+    width: 100px;
+}
+
+.api-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.response-area {
+    flex-grow: 1;
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+}

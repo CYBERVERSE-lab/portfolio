@@ -23,14 +23,12 @@
                     <p style="padding-top: 20px;"><img src="../static/Photo.JPG" alt="Photo" width="160" height="200"></p>
                 </div>
                 <div class="list-group" style="width: 15rem; padding-top: 10px;">
-                    <button type="button" class="list-group-item list-group-item-action active" aria-current="true">
-                        Projects
-                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">Projects</button>
                     <button type="button" class="list-group-item list-group-item-action">Skills</button>
                     <button type="button" class="list-group-item list-group-item-action">Experience</button>
                     <button type="button" class="list-group-item list-group-item-action">Education</button>
                     <button type="button" class="list-group-item list-group-item-action">Certifications</button>
-                    <button type="button" class="list-group-item list-group-item-action">About Me</button>
+                    <button type="button" class="list-group-item list-group-item-action">About</button>
                     <button type="button" class="list-group-item list-group-item-action">Contacts</button>
                     </select>
                 </div>
@@ -40,13 +38,13 @@
             <div class="api-card">
                 <div class="api-header">
                     <button type="button" class="btn btn-outline-info" disabled="True">GET</button>
-                    <input type="text" class="form-control url-input" placeholder="URL">
+                    <input type="text" class="form-control url-input" placeholder="URL" value="">
                     <button class="btn btn-primary request-button">Request</button>
                 </div>
                 <div class="card text-center">
                     <div class="card-header">
                         <ul class="nav nav-tabs card-header-tabs">
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="#">Headers</a>
                             </li>
                             <li class="nav-item">
@@ -54,13 +52,14 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Cookies</a>
-                            </li>
+                            </li> -->
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Response</a>
                             </li>
                         </ul>
                     </div>
                     <div class="card-body" style="width: inherit; height: 26.5rem; text-align: left;">
+                        <pre class="card-text response-area" id="json-content"></pre>
                     </div>
                 </div>
             </div>
